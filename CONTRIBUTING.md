@@ -1,3 +1,5 @@
+![Hacktoberfest_img](https://hacktoberfest.digitalocean.com/assets/logo-hf19-header-8245176fe235ab5d942c7580778a914110fa06a23c3d55bf40e2d061809d8785.svg)
+
 # New Contributors
 This is primarily a fun [Hacktoberfest](https://hacktoberfest.digitalocean.com/) project, designed to get new developers interested in writing code and contributing to open source projects.
 
@@ -16,7 +18,7 @@ In your learning efforts you should focus on these areas;
 To get credit for Hacktoberfest you must first register on their website (use the link above). Once you have done this there's some specific steps that you need to take.
   - Fork the repo using the fork button on the top right.
   - Once you have forked the repo, you are free to make changes as you wish.
-  - Once you have made your changes - Open a PR to this repository that targets the `dev` branch.
+  - Once you have made your changes - Open a PR to this repository (more on how to do that [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)) that targets the `dev` branch.
   - Your PR will then be code reviewed, to provide some positive feedback on how to improve or in areas that can be changed to avoid code errors.
   - Your PR may then be approved, and merged in.
   - Celebrate your hard work! :tada:
@@ -28,3 +30,4 @@ To get credit for Hacktoberfest you must first register on their website (use th
     - You can contact [KSigWyatt](https://github.com/ksigWyatt/) or email me via [wyatt1704@gmail.com](mailto:wyatt1704@gmail.com)
   - _How do I get credit for Hacktoberfest?_
     - Please visit the Hacktoberfest website, and make sure you've completed all the steps there. If your PR gets merged in, you'll get credit.
+    - You can track your progres by visiting the [Profile](https://hacktoberfest.digitalocean.com/profile) page on the Hacktober site.
