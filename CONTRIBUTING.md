@@ -1,4 +1,6 @@
-![Hacktoberfest_img](https://hacktoberfest.digitalocean.com/assets/logo-hf19-header-8245176fe235ab5d942c7580778a914110fa06a23c3d55bf40e2d061809d8785.svg)
+<p align="center">
+  <img width="400" height="400" src="https://hacktoberfest.digitalocean.com/assets/logo-hf19-full-10f3c000cea930c76acc1dedc516ea7118b95353220869a3051848e45ff1d656.svg">
+</p>
 
 # New Contributors
 This is primarily a fun [Hacktoberfest](https://hacktoberfest.digitalocean.com/) project, designed to get new developers interested in writing code and contributing to open source projects.
