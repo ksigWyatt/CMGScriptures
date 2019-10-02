@@ -38,6 +38,8 @@ To get credit for Hacktoberfest you must first register on their website (use th
   - UI
     - You will need to download [NodeJS](https://nodejs.org/en/download/)
     - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
+      - _Please skip step 2._
+      - You can run the UI by simply running `ng serve` within the `UI/CMGScriptures` directory 
     
   ### Best Practices
   - Please make sure that your code is commented
