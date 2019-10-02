@@ -2,7 +2,7 @@
 name: New Issue
 about: Hacktoberfest issue
 title: New Issue
-labels: Hacktoberfest
+labels: Hacktoberfest, good first issue
 assignees: ''
 
 ---
