@@ -22,4 +22,4 @@ jobs:
     - name: Restore NuGet Packages
       run: dotnet restore "API\CMGScripturesAPI\CMGScripturesAPI.sln"
     - name: .NET Build
-      run: dotnet publish -c Release "API\CMGScripturesAPI\CMGScripturesAPI.sln"
+      run: dotnet build -c Release "API\CMGScripturesAPI\CMGScripturesAPI.sln"
