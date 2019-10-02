@@ -16,6 +16,13 @@ In your learning efforts you should focus on these areas;
 - Angular
 - API Development
 
+### What are some good resources to use when learning?
+_All of these are free resources on YouTube_
+- [C# / Using Visual Studio](https://youtu.be/gfkTfcpWqAY)
+- [Javascript](https://youtu.be/W6NZfCO5SIk)
+- [Angular 7](https://youtu.be/5wtnKulcquA)
+
+
 ## How do I contribute?
 To get credit for Hacktoberfest you must first register on their website (use the link above). Once you have done this there's some specific steps that you need to take.
   - Fork the repo using the fork button on the top right.
@@ -24,6 +31,20 @@ To get credit for Hacktoberfest you must first register on their website (use th
   - Your PR will then be code reviewed, to provide some positive feedback on how to improve or in areas that can be changed to avoid code errors.
   - Your PR may then be approved, and merged in.
   - Celebrate your hard work! :tada:
+  
+  ### Requirements
+  - API
+    - Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+  - UI
+    - You will need to download [NodeJS](https://nodejs.org/en/download/)
+    - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
+    
+  ### Best Practices
+  - Please make sure that your code is commented
+  - Be sure to use descriptive variable names
+  - Please try to follow patterns already set in the code
+  - Try your best - and have fun!
+    - If you get stuck, reach out for help. You can also visit [Stack Overflow](https://stackoverflow.com/) to see if there's an answer to a question you have
   
   ## FAQ
   - _What version control software should I use to manage my commits?_
