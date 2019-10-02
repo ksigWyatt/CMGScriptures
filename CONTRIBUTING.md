@@ -26,7 +26,8 @@ _All of these are free resources on YouTube_
 ## How do I contribute?
 To get credit for Hacktoberfest you must first register on their website (use the link above). Once you have done this there's some specific steps that you need to take.
   - Fork the repo using the fork button on the top right.
-  - Once you have forked the repo, you are free to make changes as you wish.
+  - Find an issue that you'd like to work on, and add yourself as the assignee. This will prevent others from doing the same work as you.
+  - Once you have forked the repo, you are free to make changes to complete your assigned task.
   - Once you have made your changes - Open a PR to this repository (more on how to do that [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)) that targets the `dev` branch.
   - Your PR will then be code reviewed, to provide some positive feedback on how to improve or in areas that can be changed to avoid code errors.
   - Your PR may then be approved, and merged in.
@@ -38,7 +39,7 @@ To get credit for Hacktoberfest you must first register on their website (use th
   - UI
     - You will need to download [NodeJS](https://nodejs.org/en/download/)
     - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
-      - _Please skip step 2._
+      - _Please skip step 2_
       - You can run the UI by simply running `ng serve` within the `UI/CMGScriptures` directory 
     
   ### Best Practices
