@@ -107,7 +107,7 @@ namespace CMGScripturesAPI
 
             #endregion
 
-            #region Register for Dipendency Injection
+            #region Register for Dependency Injection
 
             #region Services
 
