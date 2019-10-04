@@ -38,8 +38,8 @@ To get credit for Hacktoberfest you must first register on their website (use th
     1. Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
     2. You will need to download & install [MongoDB Community](https://www.mongodb.com/download-center/community)
   - UI
-    1. You will need to download [NodeJS](https://nodejs.org/en/download/)
-    2. You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
+    - You will need to download [NodeJS](https://nodejs.org/en/download/)
+    - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
       - _Please skip step 2_
       - You can run the UI by simply running `ng serve` within the `UI/CMGScriptures` directory
     
