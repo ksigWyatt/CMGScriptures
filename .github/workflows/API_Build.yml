@@ -1,0 +1,25 @@
+name: ASP.NET Core CI
+
+on: 
+  pull_request:
+    branches:
+    - dev
+    - QA
+    - master
+
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.206
+    - name: Restore NuGet Packages
+      run: dotnet restore "API\CMGScripturesAPI\CMGScripturesAPI.sln"
+    - name: .NET Build
+      run: dotnet build -c Release "API\CMGScripturesAPI\CMGScripturesAPI.sln"
