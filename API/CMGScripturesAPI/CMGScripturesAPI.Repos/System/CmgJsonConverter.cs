@@ -12,5 +12,10 @@ namespace CMGScripturesAPI.Repos.System {
             return result.images;
         }
 
+        public static MetaDto ExtractMetaObjectFromResponse(string responseJson) {
+            var result = JsonConvert.DeserializeObject<CmgResponseOuterDto>(responseJson);
+            return result.meta;
+        }
+
     }
 }

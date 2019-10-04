@@ -43,13 +43,19 @@ namespace CMGScripturesAPI.Repos.Tests {
         }
         [Fact]
         public void ConvertImageResponseToDto_Valid_MetaObjectIsCorrect() {
-            int expected = 36;
+            MetaDto expectedMeta = new MetaDto() {
+                RequestTotal = 36,
+                RequestStart = 0,
+                RequestEnd = 36,
+                Total = 3668
+            };
             string currentDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
             string sampleJsonPath = $"{projectDirectory}\\Samples\\CmgGetResponseSample.json";
             string sampleJson = File.ReadAllText(sampleJsonPath);
-            var imageDtos = CmgJsonConverter.ExtractImageObjectsFromResponse(sampleJson);
-            Assert.Equal(expected, imageDtos.ToList().Count);
+
+            var metaResult = CmgJsonConverter.ExtractMetaObjectFromResponse(sampleJson);
+            Assert.Equal(expectedMeta.Total, metaResult.Total);
         }
     }
 }
