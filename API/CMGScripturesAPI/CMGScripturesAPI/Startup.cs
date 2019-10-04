@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using CMGScriptures.Core.System.ExceptionHandler;
+using CMGScripturesAPI.Core;
+using CMGScripturesAPI.Repos;
 using CMGScripturesAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,20 +24,65 @@ namespace CMGScripturesAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public IConfigurationRoot Configuration { get; set; }
 
-        public IConfiguration Configuration { get; }
+        public Startup(IHostingEnvironment env)
+        {
+            // grab the settings from our AppSettings.json
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            //// Add functionality to inject IOptions<T>
-            //services.AddOptions();
+            #region Startup dependencies
+
+            // Add functionality to inject IOptions<T>
+            services.AddOptions();
+
+            // Register the Configuration to use our app settings from the json file
+            services.Configure<AppSettings>(Configuration);
+
+            #endregion
+
+            #region Init Connection to MongoDB
+
+            // Add to our Config object so it can be injected later
+            services.Configure<AppSettings>(options => Configuration.GetSection(nameof(AppSettings.MongoConnectionString)).Bind(options));
+
+            var mongoConfig = Configuration.GetSection(nameof(AppSettings.MongoConnectionString));
+
+            if (mongoConfig == null)
+            {
+                throw new ArgumentNullException($"IConfiguration.{nameof(AppSettings.MongoConnectionString)}",
+                    string.Format(APIMessages.ConnectionMissingFromAppSettings, nameof(AppSettings.MongoConnectionString)));
+            }
+
+            var mongoConnection = Configuration[nameof(AppSettings.MongoConnectionString)];
+
+            #endregion
+
+            #region Init Connection to CMG API
+
+            // Add to our Config object so it can be injected later
+            services.Configure<AppSettings>(options => Configuration.GetSection(nameof(AppSettings.CMGApiUrl)).Bind(options));
+
+            var cmgApiUrl = Configuration.GetSection(nameof(AppSettings.CMGApiUrl));
+
+            if (cmgApiUrl == null)
+            {
+                throw new ArgumentNullException($"IConfiguration.{nameof(AppSettings.CMGApiUrl)}",
+                    string.Format(APIMessages.ConnectionMissingFromAppSettings, nameof(AppSettings.CMGApiUrl)));
+            }
+
+            #endregion
 
             #region Configure Logging
 
@@ -65,6 +112,12 @@ namespace CMGScripturesAPI
             #region Services
 
             services.AddTransient(typeof(IScripturesService), typeof(ScripturesService));
+
+            #endregion
+
+            #region Repositories
+
+            services.AddTransient(typeof(IScriptureRepo), typeof(ScriptureRepo));
 
             #endregion
 
