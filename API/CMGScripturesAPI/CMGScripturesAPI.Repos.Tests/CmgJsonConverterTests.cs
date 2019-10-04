@@ -1,6 +1,7 @@
 using CMGScripturesAPI.Repos.System;
 using System;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace CMGScripturesAPI.Repos.Tests {
@@ -12,7 +13,7 @@ namespace CMGScripturesAPI.Repos.Tests {
             string sampleJsonPath = $"{projectDirectory}\\Samples\\CmgGetResponseSample.json";
             string sampleJson = File.ReadAllText(sampleJsonPath);
             var imageDtos = CmgJsonConverter.ConvertImageResponseToDto(sampleJson);
-            Assert.Equal(expected, imageDtos.Count);
+            Assert.Equal(expected, imageDtos.ToList().Count);
         }
     }
 }
