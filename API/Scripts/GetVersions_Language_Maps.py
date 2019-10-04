@@ -1,4 +1,3 @@
-# import libraries
 import urllib2
 import json
 from bs4 import BeautifulSoup
@@ -109,9 +108,6 @@ def main():
     print "\nGathering Versions"
     languages_list = get_languages(html)
     write_data_to_file(languages_list, "languagesMap")
-
-    # print "\nGetting the slugs"
-    # slugList = get_slugs(html)
 
 
 # call the main method
