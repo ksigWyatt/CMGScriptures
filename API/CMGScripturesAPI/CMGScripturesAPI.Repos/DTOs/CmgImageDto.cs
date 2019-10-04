@@ -8,7 +8,7 @@ namespace CMGScripturesAPI.Repos.DTOs {
         //public string Permalink { get; set; }
         //public string Name { get; set; }
         //public string Type { get; set; }
-        public DateTime Added { get; set; }
+        public long Added { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
         public CreatorDto Creator { get; set; }
