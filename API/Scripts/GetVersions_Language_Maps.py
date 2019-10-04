@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 from unidecode import unidecode
 from datetime import datetime
 
+# Rquirements -> Python 2.7
+# Pip for installing required libraries
+
 # Get the versions
 def get_version_slug_map(html):
 
