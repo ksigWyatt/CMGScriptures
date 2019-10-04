@@ -14,7 +14,7 @@ namespace CMGScripturesAPI.Repos.Tests {
             string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
             string sampleJsonPath = $"{projectDirectory}\\Samples\\CmgGetResponseSample.json";
             string sampleJson = File.ReadAllText(sampleJsonPath);
-            var imageDtos = CmgJsonConverter.ConvertImageResponseToDto(sampleJson);
+            var imageDtos = CmgJsonConverter.ExtractImageObjectsFromResponse(sampleJson);
             Assert.Equal(expected, imageDtos.ToList().Count);
         }
         [Fact]
@@ -36,10 +36,20 @@ namespace CMGScripturesAPI.Repos.Tests {
             string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
             string sampleJsonPath = $"{projectDirectory}\\Samples\\CmgGetResponseSample.json";
             string sampleJson = File.ReadAllText(sampleJsonPath);
-            var imageDtos = CmgJsonConverter.ConvertImageResponseToDto(sampleJson);
+            var imageDtos = CmgJsonConverter.ExtractImageObjectsFromResponse(sampleJson);
             var firstImageDto = imageDtos.ToList()[0];
             Assert.Equal(expectedDto.Id, firstImageDto.Id);
             Assert.Equal(expectedDto.Creator.Id, firstImageDto.Creator.Id);
+        }
+        [Fact]
+        public void ConvertImageResponseToDto_Valid_MetaObjectIsCorrect() {
+            int expected = 36;
+            string currentDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string sampleJsonPath = $"{projectDirectory}\\Samples\\CmgGetResponseSample.json";
+            string sampleJson = File.ReadAllText(sampleJsonPath);
+            var imageDtos = CmgJsonConverter.ExtractImageObjectsFromResponse(sampleJson);
+            Assert.Equal(expected, imageDtos.ToList().Count);
         }
     }
 }

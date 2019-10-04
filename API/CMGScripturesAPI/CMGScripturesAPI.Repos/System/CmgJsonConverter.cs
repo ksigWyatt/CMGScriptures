@@ -7,9 +7,10 @@ using System.Text;
 
 namespace CMGScripturesAPI.Repos.System {
     public static class CmgJsonConverter {
-        public static IEnumerable<CmgImageDto> ConvertImageResponseToDto(string responseJson) {
+        public static IEnumerable<CmgImageDto> ExtractImageObjectsFromResponse(string responseJson) {
             var result = JsonConvert.DeserializeObject<CmgResponseOuterDto>(responseJson);
             return result.images;
         }
+
     }
 }
