@@ -21,4 +21,4 @@ Wihin the YouVersion bible app there is a scripture graphic editor. The goal is 
 </table>
 
 ## License
-This software is free and open source, please see the [License](../master/License) for more info.
+This software is free and open source, please see the [License](../master/LICENSE) for more info.
