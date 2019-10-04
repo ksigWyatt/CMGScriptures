@@ -11,7 +11,7 @@ Weclcome friend! We would like to welcome anyone, no matter your skill level to 
 ### Stack
 In your learning efforts you should focus on these areas;
 - C# 
-- .Net Core
+- .NET Core
 - Javascript
 - Angular
 - API Development
@@ -35,12 +35,13 @@ To get credit for Hacktoberfest you must first register on their website (use th
   
   ### Requirements
   - API
-    - Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    1. Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    2. You will need to download & install [MongoDB Community](https://www.mongodb.com/download-center/community)
   - UI
-    - You will need to download [NodeJS](https://nodejs.org/en/download/)
-    - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
+    1. You will need to download [NodeJS](https://nodejs.org/en/download/)
+    2. You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
       - _Please skip step 2_
-      - You can run the UI by simply running `ng serve` within the `UI/CMGScriptures` directory 
+      - You can run the UI by simply running `ng serve` within the `UI/CMGScriptures` directory
     
   ### Best Practices
   - Please make sure that your code is commented
