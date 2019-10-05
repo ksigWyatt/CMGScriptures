@@ -1,18 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.779
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMGScripturesAPI", "CMGScripturesAPI\CMGScripturesAPI.csproj", "{094C2060-4430-4359-B9A5-ED02AF3D187E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMGScripturesAPI", "CMGScripturesAPI\CMGScripturesAPI.csproj", "{094C2060-4430-4359-B9A5-ED02AF3D187E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1D6DEE7A-A3B6-46AF-92FB-33E62D4D966D} = {1D6DEE7A-A3B6-46AF-92FB-33E62D4D966D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMGScripturesAPI.Services", "CMGScripturesAPI.Services\CMGScripturesAPI.Services.csproj", "{1D6DEE7A-A3B6-46AF-92FB-33E62D4D966D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMGScripturesAPI.Services", "CMGScripturesAPI.Services\CMGScripturesAPI.Services.csproj", "{1D6DEE7A-A3B6-46AF-92FB-33E62D4D966D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMGScripturesAPI.Core", "CMGScripturesAPI.Core\CMGScripturesAPI.Core.csproj", "{CBB8FFD2-6504-44CC-89AF-962DC9CCD1D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMGScripturesAPI.Core", "CMGScripturesAPI.Core\CMGScripturesAPI.Core.csproj", "{CBB8FFD2-6504-44CC-89AF-962DC9CCD1D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMGScripturesAPI.Repos", "CMGScripturesAPI.Repos\CMGScripturesAPI.Repos.csproj", "{C66F6BD8-0405-41AD-A118-C24460DE1FF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMGScripturesAPI.Repos", "CMGScripturesAPI.Repos\CMGScripturesAPI.Repos.csproj", "{C66F6BD8-0405-41AD-A118-C24460DE1FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMGScripturesAPI.Repos.Tests", "CMGScripturesAPI.Repos.Tests\CMGScripturesAPI.Repos.Tests.csproj", "{1B7F1C86-EA8F-41DC-AAFB-45734FFCD25B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{C66F6BD8-0405-41AD-A118-C24460DE1FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66F6BD8-0405-41AD-A118-C24460DE1FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C66F6BD8-0405-41AD-A118-C24460DE1FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7F1C86-EA8F-41DC-AAFB-45734FFCD25B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7F1C86-EA8F-41DC-AAFB-45734FFCD25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7F1C86-EA8F-41DC-AAFB-45734FFCD25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7F1C86-EA8F-41DC-AAFB-45734FFCD25B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
