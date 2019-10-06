@@ -8,7 +8,7 @@ using Xunit;
 namespace CMGScripturesAPI.Repos.Tests {
     public class CmgJsonConverterTests {
         [Fact]
-        public void ConvertImageResponseToDto_Valid_ReturnsCorrectNumber() {
+        public void ExtractImageObjectsFromResponse_Valid_ReturnsCorrectNumber() {
             int expected = 36;
             string currentDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
@@ -18,7 +18,7 @@ namespace CMGScripturesAPI.Repos.Tests {
             Assert.Equal(expected, imageDtos.ToList().Count);
         }
         [Fact]
-        public void ConvertImageResponseToDto_Valid_FirstResultMatches() {
+        public void ExtractImageObjectsFromResponse_Valid_FirstResultMatches() {
             CmgImageDto expectedDto = new CmgImageDto() {
                 Id = "92e39968-9b3b-c7b9-6e11-704b8b37915c",
                 Added = 1569938294,
@@ -42,7 +42,7 @@ namespace CMGScripturesAPI.Repos.Tests {
             Assert.Equal(expectedDto.Creator.Id, firstImageDto.Creator.Id);
         }
         [Fact]
-        public void ConvertImageResponseToDto_Valid_MetaObjectIsCorrect() {
+        public void ExtractMetaObjectFromResponse_Valid_MetaObjectIsCorrect() {
             MetaDto expectedMeta = new MetaDto() {
                 RequestTotal = 36,
                 RequestStart = 0,
