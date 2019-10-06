@@ -112,12 +112,14 @@ namespace CMGScripturesAPI
             #region Services
 
             services.AddTransient(typeof(IScripturesService), typeof(ScripturesService));
+            services.AddTransient(typeof(ICMGService), typeof(CMGService));
 
             #endregion
 
             #region Repositories
 
             services.AddTransient(typeof(IScriptureRepo), typeof(ScriptureRepo));
+            services.AddTransient(typeof(ICMGRepo), typeof(CMGRepo));
 
             #endregion
 

@@ -35,7 +35,8 @@ namespace CMGScripturesAPI.Repos
 
         #region CMG Graphics
 
-        public const string CMGImageCache = "CMGImages_CreateDate_TTL_12Hours_1";
+        public const string CMGMediaId = "CMGImages_MediaId_1";
+        public const string CMGImageCache = "CMGImages_CreateDate_TTL_12Hours_-1";
 
         #endregion
     }

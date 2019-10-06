@@ -7,5 +7,6 @@ namespace CMGScripturesAPI.Repos
     public class CollectionConstants
     {
         public const string ScriptureCache = "ScriptureCache";
+        public const string CMGCache = "CMGCache";
     }
 }
