@@ -35,8 +35,9 @@ To get credit for Hacktoberfest you must first register on their website (use th
   
   ### Requirements
   - API
-    1. Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    2. You will need to download & install [MongoDB Community](https://www.mongodb.com/download-center/community)
+    - Download the Community edition of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+      - _NOTE: You must target the runtime for .NET Core 2.2, so that we only need to install 1 version of the .NET Runtime._
+    - You will need to download & install [MongoDB Community](https://www.mongodb.com/download-center/community)
   - UI
     - You will need to download [NodeJS](https://nodejs.org/en/download/)
     - You will need to install Angular by following [these steps](https://angular.io/guide/setup-local)
