@@ -55,5 +55,5 @@ namespace CMGScripturesAPI.Core
             return new ValidationResponse("Success!");
         }
     }
-    
+
 }

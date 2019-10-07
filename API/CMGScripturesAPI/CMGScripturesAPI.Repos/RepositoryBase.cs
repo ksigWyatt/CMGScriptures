@@ -70,18 +70,21 @@ namespace CMGScripturesAPI.Repos
             MongoConnectionString = Configuration["MongoConnectionString"];
             CMG_API_URL = Configuration["CMGApiUrl"];
 
-            // in the event our configs are null, throw a Null Exception
+            // in the event our configs are null, throw a ArgumentNullException
             ValidateConfigs(Configuration);
 
-            // assuming the configs are valid, create a MongoClient we can use for everything, we only need one.
-            // Sets the Client object for a given connection string
-            Client = new MongoClient(MongoConnectionString);
+            if (!string.IsNullOrEmpty(collectionName))
+            {
+                // assuming the configs are valid, create a MongoClient we can use for everything, we only need one.
+                // Sets the Client object for a given connection string
+                Client = new MongoClient(MongoConnectionString);
 
-            // assign our database to the global Abide Database, this will also create it if it does not exist
-            DB = Client.GetDatabase(DB_NAME);
+                // assign our database to the global Database, this will also create it if it does not exist
+                DB = Client.GetDatabase(DB_NAME);
 
-            // safely create new collections
-            CreateNewCollection(collectionName);
+                // safely create new collections
+                CreateNewCollection(collectionName);
+            }
         }
 
         /// <summary>
@@ -124,6 +127,8 @@ namespace CMGScripturesAPI.Repos
             }
         }
 
+        #region Generic MongoDB Methods
+
         /// <summary>
         /// Generates a collection's indicies
         /// </summary>
@@ -159,6 +164,10 @@ namespace CMGScripturesAPI.Repos
             return cursor.Skip(pagingInfo.PageCount * (pagingInfo.PageNumber - 1)).Limit(pagingInfo.PageCount).ToListAsync();
         }
 
+        #endregion
+
+        #region Generic Methods
+
         /// <summary>
         /// Page results from a pre-sorted find result set
         /// </summary>
@@ -171,5 +180,47 @@ namespace CMGScripturesAPI.Repos
         {
             return elements.Skip(pagingInfo.PageCount * (pagingInfo.PageNumber - 1)).Take(pagingInfo.PageCount);
         }
+
+        /// <summary>
+        /// Convert any JSON string into an object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="json"></param>
+        /// <returns></returns>
+        public static T ConvertJSONToObject<T>(string json)
+        {
+            var result = JsonConvert.DeserializeObject<T>(json);
+            return result;
+        }
+
+        #endregion
+
+        #region REST Methods
+
+        /// <summary>
+        /// Send a Get request with an optional auth token
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="authToken"></param>
+        /// <returns></returns>
+        public async Task<HttpResponseMessage> GetAsync(string url, string authToken = null)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("User-Agent", "HttpClient");
+
+            // we may not ever have an auth token in the request
+            if (!string.IsNullOrEmpty(authToken))
+            {
+                request.Headers.Add("Authorization", authToken);
+            }
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            return response;
+        }
+
+        #endregion
     }
 }
