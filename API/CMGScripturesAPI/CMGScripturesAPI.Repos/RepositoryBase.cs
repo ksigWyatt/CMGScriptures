@@ -79,7 +79,7 @@ namespace CMGScripturesAPI.Repos
                 // Sets the Client object for a given connection string
                 Client = new MongoClient(MongoConnectionString);
 
-                // assign our database to the global Abide Database, this will also create it if it does not exist
+                // assign our database to the global Database, this will also create it if it does not exist
                 DB = Client.GetDatabase(DB_NAME);
 
                 // safely create new collections
@@ -127,6 +127,8 @@ namespace CMGScripturesAPI.Repos
             }
         }
 
+        #region Generic MongoDB Methods
+
         /// <summary>
         /// Generates a collection's indicies
         /// </summary>
@@ -162,6 +164,10 @@ namespace CMGScripturesAPI.Repos
             return cursor.Skip(pagingInfo.PageCount * (pagingInfo.PageNumber - 1)).Limit(pagingInfo.PageCount).ToListAsync();
         }
 
+        #endregion
+
+        #region Generic Methods
+
         /// <summary>
         /// Page results from a pre-sorted find result set
         /// </summary>
@@ -187,7 +193,9 @@ namespace CMGScripturesAPI.Repos
             return result;
         }
 
-        #region Generic REST Methods
+        #endregion
+
+        #region REST Methods
 
         /// <summary>
         /// Send a Get request with an optional auth token
