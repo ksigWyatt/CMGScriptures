@@ -1,0 +1,246 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos.Tests\\CMGScripturesAPI.Repos.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\CMGScripturesAPI.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\CMGScripturesAPI.Core.csproj",
+        "projectName": "CMGScripturesAPI.Core",
+        "projectPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\CMGScripturesAPI.Core.csproj",
+        "packagesPath": "C:\\Users\\Prime Time Pauly G\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Prime Time Pauly G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos.Tests\\CMGScripturesAPI.Repos.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos.Tests\\CMGScripturesAPI.Repos.Tests.csproj",
+        "projectName": "CMGScripturesAPI.Repos.Tests",
+        "projectPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos.Tests\\CMGScripturesAPI.Repos.Tests.csproj",
+        "packagesPath": "C:\\Users\\Prime Time Pauly G\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Prime Time Pauly G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\CMGScripturesAPI.Repos.csproj": {
+                "projectPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\CMGScripturesAPI.Repos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\CMGScripturesAPI.Repos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\CMGScripturesAPI.Repos.csproj",
+        "projectName": "CMGScripturesAPI.Repos",
+        "projectPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\CMGScripturesAPI.Repos.csproj",
+        "packagesPath": "C:\\Users\\Prime Time Pauly G\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Repos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Prime Time Pauly G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\CMGScripturesAPI.Core.csproj": {
+                "projectPath": "C:\\Users\\Prime Time Pauly G\\Source\\Repos\\CMGScriptures\\API\\CMGScripturesAPI\\CMGScripturesAPI.Core\\CMGScripturesAPI.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
