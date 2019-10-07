@@ -34,7 +34,6 @@ namespace CMGScripturesAPI.Services
                 return new APIResponse<CMGThumbnailResponse>(true, cmgResponse.ErrorMessage);
             }
 
-
             return new APIResponse<CMGThumbnailResponse>(cmgResponse.Result, "Success!");
         }
     }

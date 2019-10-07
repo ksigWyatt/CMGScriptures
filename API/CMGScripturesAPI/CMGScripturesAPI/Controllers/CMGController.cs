@@ -37,7 +37,7 @@ namespace CMGScripturesAPI.Controllers
         [HttpGet("thumbnails")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<CMGThumbnailResponse>> GetPagedThumbnails([BindRequired] PagingRequest paging)
+        public async Task<ActionResult<CMGThumbnailResponse>> GetPagedThumbnails([FromQuery][BindRequired] PagingRequest paging)
         {
             var response = await _cmgService.GetPagedThumbnails(paging);
 
